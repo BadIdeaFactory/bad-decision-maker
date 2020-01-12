@@ -1,8 +1,8 @@
 {
 	"background_color": "#ffffff",
 	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"name": "Bad Decision Maker",
+	"short_name": "BDM",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [

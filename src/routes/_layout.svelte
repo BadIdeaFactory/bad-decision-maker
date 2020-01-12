@@ -1,22 +1,39 @@
-<script>
-	import Nav from '../components/Nav.svelte';
+<svelte:window />
+  <TopAppBar variant="standard" class="top-app-bar">
+    <Row>
+      <Section>
+        <Title component={A} href="/" class="mdc-theme--primary">
+          Bad Decision Maker
+        </Title>
+      </Section>
+    </Row>
+  </TopAppBar>
+  <main class="main-content">
+    <slot></slot>
 
-	export let segment;
+    <div class="fab">
+      <Fab on:click={() => sapper.goto('/create')}><Icon class="material-icons">add</Icon></Fab>
+    </div>
+  </main>
+
+<script>
+  import * as sapper from '@sapper/app';
+
+  import './_app.scss';
+
+  import TopAppBar, {Row, Section, Title} from '@smui/top-app-bar';
+  import Fab, {Label, Icon} from '@smui/fab';
+  import A from '@smui/common/A.svelte';
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+.fab {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.main-content {
+  padding: 80px;
+}
 </style>
-
-<Nav {segment}/>
-
-<main>
-	<slot></slot>
-</main>
