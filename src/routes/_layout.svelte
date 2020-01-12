@@ -12,13 +12,13 @@
     <slot></slot>
 
     <div class="fab">
-      <Fab on:click={() => sapper.goto('/create')}><Icon class="material-icons">add</Icon></Fab>
+      <a href="/create" rel=prefetch>
+        <Fab><Icon class="material-icons">add</Icon></Fab>
+      </a>
     </div>
   </main>
 
 <script>
-  import * as sapper from '@sapper/app';
-
   import './_app.scss';
 
   import TopAppBar, {Row, Section, Title} from '@smui/top-app-bar';

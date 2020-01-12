@@ -4,18 +4,17 @@
 
 <section>
   <div class="paper-container">
-    <Paper color="primary" class="paper" on:click={() => sapper.goto('/create')}>
-      <Title>Make bad decisions faster</Title>
-      <Content>Never before has it been this easy to commit to terrible ideas.</Content>
-    </Paper>
+    <a href="/create" rel=prefetch>
+      <Paper color="primary" class="paper">
+        <Title>Make bad decisions faster</Title>
+        <Content>Never before has it been this easy to commit to terrible ideas.</Content>
+      </Paper>
+    </a>
   </div>
 </section>
 
 <script>
-  import * as sapper from '@sapper/app';
-
   import Paper, {Title, Subtitle, Content} from '@smui/paper';
-  import A from '@smui/common/A.svelte';
 </script>
 
 <style>
