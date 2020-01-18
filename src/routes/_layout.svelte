@@ -35,6 +35,6 @@
 }
 
 .main-content {
-  padding: 80px;
+  padding-top: 60px;
 }
 </style>
