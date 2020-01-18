@@ -28,9 +28,10 @@
 
 <style>
 .fab {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 10;
 }
 
 .main-content {

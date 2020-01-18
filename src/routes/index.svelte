@@ -18,6 +18,10 @@
 </script>
 
 <style>
+  a {
+    text-decoration: none;
+  }
+
   .paper-container {
     margin-left: auto;
     margin-right: auto;
