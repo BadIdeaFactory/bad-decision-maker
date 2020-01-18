@@ -21,6 +21,6 @@
 
 <style>
 .main-content {
-  padding-top: 60px;
+  padding-top: 45px;
 }
 </style>
