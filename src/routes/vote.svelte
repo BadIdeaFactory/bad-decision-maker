@@ -4,7 +4,7 @@
 
 <section>
   <div class="poll-container">
-    <h1 style="margin-bottom: 0;padding-bottom: 0">Poll name</h1>
+    <h1 style="margin-bottom: 0;padding-bottom: 0">Poll title</h1>
 
     <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
 
