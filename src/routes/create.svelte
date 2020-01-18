@@ -8,6 +8,7 @@
   <div>
       <div class="field-container">
         <Textfield fullwidth bind:value={title} label="Title" id="title" />
+        <!-- bind:this={titleEl} -->
         <!-- input$aria-controls="helper-text-title" input$aria-describedby="helper-text-title"
         <HelperText id="helper-text-title">Title</HelperText>
         -->
@@ -39,11 +40,14 @@
   let option1 = '';
   let option2 = '';
 
+  /*
+  let titleEl;
+
   onMount(() => {
     setTimeout(() => {
-      document.querySelector('#title').focus();
+      titleEl.focus();
     },500);
-  })
+  })*/
 </script>
 
 <style>

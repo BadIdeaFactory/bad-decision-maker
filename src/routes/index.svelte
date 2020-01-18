@@ -11,10 +11,13 @@
       </Paper>
     </a>
   </div>
+
+  <Fab/>
 </section>
 
 <script>
   import Paper, {Title, Subtitle, Content} from '@smui/paper';
+  import Fab from '../components/fab.svelte';
 </script>
 
 <style>

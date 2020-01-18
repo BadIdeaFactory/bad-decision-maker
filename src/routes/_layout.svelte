@@ -10,30 +10,16 @@
   </TopAppBar>
   <main class="main-content">
     <slot></slot>
-
-    <div class="fab">
-      <a href="/create" rel=prefetch>
-        <Fab><Icon class="material-icons">add</Icon></Fab>
-      </a>
-    </div>
   </main>
 
 <script>
   import './_app.scss';
 
   import TopAppBar, {Row, Section, Title} from '@smui/top-app-bar';
-  import Fab, {Label, Icon} from '@smui/fab';
   import A from '@smui/common/A.svelte';
 </script>
 
 <style>
-.fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
-}
-
 .main-content {
   padding-top: 60px;
 }
