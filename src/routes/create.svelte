@@ -24,7 +24,9 @@
           <Textfield fullwidth bind:value={option1} label="Option 2" />
         </div>
         <div class="field-container">
-          <Button variant="raised"><Label>Create</Label></Button>
+          <a href="/vote" rel=prefetch>
+              <Button variant="raised"><Label>Create</Label></Button>
+          </a>
         </div>
     </div>
   </div>
@@ -53,6 +55,10 @@
 </script>
 
 <style>
+  a {
+    text-decoration: none;
+  }
+  
   .create-container {
     margin-left: auto;
     margin-right: auto;
