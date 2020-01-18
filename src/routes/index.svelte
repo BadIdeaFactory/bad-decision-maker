@@ -18,8 +18,8 @@
     <Card>
       <Content class="mdc-typography--body2">
         <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
         <!--
-        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
         It's all in this card. It's a veritable smorgasbord of card features.
         -->
       </Content>
@@ -33,11 +33,12 @@
       </a>
     </Card>
   </div>
-  
+
   <div class="card-container">
     <Card>
       <Content class="mdc-typography--body2">
         <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
         <!--
         <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
         It's all in this card. It's a veritable smorgasbord of card features.
