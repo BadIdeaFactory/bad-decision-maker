@@ -1,7 +1,7 @@
 <TopAppBar variant="standard" class="top-app-bar">
-  <Row>
-    <Section style="max-width: 700px;margin-right: auto;margin-left: auto;">
-      <Title component={A} href="/" rel=prefetch class="mdc-theme--primary" style="padding-left: 5px">
+  <Row style="padding-left: 20px;padding-right: 20px">
+    <Section style="max-width: 700px;margin-right: auto;margin-left: auto;padding: 0">
+      <Title component={A} href="/" rel=prefetch class="mdc-theme--primary" style="padding-left: 0">
         Bad Decision Maker
       </Title>
     </Section>
@@ -20,6 +20,6 @@
 
 <style>
 .main-content {
-  padding-top: 45px;
+  padding-top: 35px;
 }
 </style>

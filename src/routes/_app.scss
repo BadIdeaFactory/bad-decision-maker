@@ -19,7 +19,7 @@
   @include mdc-top-app-bar-icon-ink-color(on-surface);
   // Give it a shadow.
   /* @include mdc-elevation(4); */
-  box-shadow: inset 0 -1px 0 rgba(100,121,143,0.122);
+  box-shadow: none;
   // Position it above the drawer.
   z-index: 7;
 }
