@@ -26,6 +26,15 @@
 
 // Now on to the regular app styling stuff.
 
+.mdc-top-app-bar__title, h1, h2 {
+  font-family: 'Overpass', sans-serif !important;
+  font-weight: 900 !important;
+}
+
+.mdc-top-app-bar__title {
+  text-transform: uppercase !important;
+}
+
 /*
 html {
   height: 100vh;
