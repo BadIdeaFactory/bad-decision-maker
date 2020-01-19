@@ -8,6 +8,11 @@
 
     <div>
         <form on:submit|preventDefault={createPoll}>
+          {#if error}
+            <div class="field-container">
+              <span style="color: red">{error}</span>
+            </div>
+          {/if}
           <div class="field-container">
             <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
           </div>
@@ -47,9 +52,10 @@
   let creator = '';
   let description = '';
   let options = ['',''];
+  let error = null;
 
   function addOptions() {
-    if (options[options.length-1] !== '' || options[options.length-2] !== '') {
+    if (options[options.length-1] !== '') {
       options.push('');
     }
   }
@@ -62,14 +68,24 @@
       options: options.filter(option => option !== '')
     };
 
-    const res = await fetch('https://6ykntbtg61.execute-api.us-east-1.amazonaws.com/dev/polls', {
-      method: 'post',
-      body: JSON.stringify(body)
-    });
+    try {
+      const res = await fetch('https://6ykntbtg61.execute-api.us-east-1.amazonaws.com/dev/polls', {
+        method: 'post',
+        body: JSON.stringify(body)
+      });
 
-    const poll = await res.json();
+      if (res.status !== 200) {
+        throw new Error(((await res.json()).message));
+      }
 
-    goto(`/vote/${poll.id}`);
+      const poll = await res.json();
+
+      goto(`/vote/${poll.id}`);
+
+    }
+    catch (e) {
+      error = e.message;
+    }
   }
 </script>
 
