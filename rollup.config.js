@@ -4,6 +4,7 @@ import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import postcss from 'rollup-plugin-postcss';
+import json from '@rollup/plugin-json';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
@@ -51,6 +52,9 @@ export default {
 				browser: true,
 				dedupe
 			}),
+
+			json(),
+
 			commonjs(),
 
 			postcss(postcssOptions()),
@@ -95,6 +99,9 @@ export default {
 			resolve({
 				dedupe
 			}),
+
+			json(),
+
 			commonjs(),
 
 			postcss(postcssOptions())
