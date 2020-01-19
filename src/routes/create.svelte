@@ -15,6 +15,9 @@
           -->
         </div>
         <div class="field-container">
+          <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
+        </div>
+        <div class="field-container">
           <Textfield style="flex-grow: 1;" variant="outlined" textarea bind:value={description} label="Description" />
         </div>
         <div class="field-container">
@@ -40,18 +43,10 @@
   import Button, { Label } from '@smui/button';
 
   let title = '';
+  let creator = '';
   let description = '';
   let option1 = '';
   let option2 = '';
-
-  /*
-  let titleEl;
-
-  onMount(() => {
-    setTimeout(() => {
-      titleEl.focus();
-    },500);
-  })*/
 </script>
 
 <style>
