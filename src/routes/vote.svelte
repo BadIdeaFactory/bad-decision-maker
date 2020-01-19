@@ -15,13 +15,13 @@
     </div>
 
     <div class="field-container">
-      <Button variant="outlined" style="flex-grow: 1;"><Label>Option 1</Label></Button>
+      <Button variant="outlined" style="flex-grow: 1;" on:click={() => option1++}><Label>Option 1 ({option1})</Label></Button>
     </div>
     <div class="field-container">
-      <Button variant="outlined" style="flex-grow: 1;"><Label>Option 2</Label></Button>
+      <Button variant="outlined" style="flex-grow: 1;" on:click={() => option2++}><Label>Option 2 ({option2})</Label></Button>
     </div>
     <div class="field-container">
-      <Button variant="outlined" style="flex-grow: 1;"><Label>Option 3</Label></Button>
+      <Button variant="outlined" style="flex-grow: 1;" on:click={() => option3++}><Label>Option 3 ({option3})</Label></Button>
     </div>
   </div>
 
@@ -34,6 +34,9 @@
   import Textfield, {Input, Textarea} from '@smui/textfield';
 
   let name = '';
+  let option1 = 0;
+  let option2 = 0;
+  let option3 = 0;
 </script>
 
 <style>
