@@ -4,7 +4,7 @@
 
 <section>
   <div class="create-container">
-    <h1>Create</h1>
+    <h2 style="margin-bottom: 0;padding-bottom: 0">Create</h2>
 
     <div>
         <div class="field-container">
