@@ -1,4 +1,4 @@
-<TopAppBar variant="fixed" class="top-app-bar">
+<TopAppBar variant="standard" class="top-app-bar">
   <Row>
     <Section>
       <Title component={A} href="/" rel=prefetch class="mdc-theme--primary">
