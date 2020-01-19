@@ -8,20 +8,20 @@
 
     <div>
         <div class="field-container">
-          <Textfield fullwidth bind:value={title} label="Title" id="title" />
+          <Textfield style="flex-grow: 1;" variant="outlined" bind:value={title} label="Title" id="title" />
           <!-- bind:this={titleEl} -->
           <!-- input$aria-controls="helper-text-title" input$aria-describedby="helper-text-title"
           <HelperText id="helper-text-title">Title</HelperText>
           -->
         </div>
         <div class="field-container">
-          <Textfield fullwidth textarea bind:value={description} label="Description" />
+          <Textfield style="flex-grow: 1;" variant="outlined" textarea bind:value={description} label="Description" />
         </div>
         <div class="field-container">
-          <Textfield fullwidth bind:value={option1} label="Option 1" />
+          <Textfield style="flex-grow: 1;" variant="outlined" bind:value={option1} label="Option 1" />
         </div>
         <div class="field-container">
-          <Textfield fullwidth bind:value={option1} label="Option 2" />
+          <Textfield style="flex-grow: 1;" variant="outlined" bind:value={option1} label="Option 2" />
         </div>
         <div class="field-container">
           <a href="/vote" rel=prefetch>
@@ -66,6 +66,7 @@
   }
 
   .field-container {
+    display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
   }

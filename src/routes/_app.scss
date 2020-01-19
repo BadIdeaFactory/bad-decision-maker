@@ -50,6 +50,10 @@ body, app {
   height: 100%;
 }
 
+.mdc-card {
+  box-shadow: inset 1px -1px 0 rgba(100,121,143,0.122), inset -1px 1px 0 rgba(100,121,143,0.122) !important;
+}
+
 @import "@material/top-app-bar/variables";
 .drawer.drawer-adjust {
   padding-bottom: $mdc-top-app-bar-row-height;

@@ -11,7 +11,7 @@
     <p>Poll description goes here</p>
 
     <div class="field-container">
-      <Textfield fullwidth bind:value={name} label="Name" />
+      <Textfield style="flex-grow: 1;" variant="outlined" bind:value={name} label="Name" />
     </div>
 
     <div class="field-container">
