@@ -1,16 +1,15 @@
-<svelte:window />
-  <TopAppBar variant="standard" class="top-app-bar">
-    <Row>
-      <Section>
-        <Title component={A} href="/" rel=prefetch class="mdc-theme--primary">
-          Bad Decision Maker
-        </Title>
-      </Section>
-    </Row>
-  </TopAppBar>
-  <main class="main-content">
-    <slot></slot>
-  </main>
+<TopAppBar variant="fixed" class="top-app-bar">
+  <Row>
+    <Section>
+      <Title component={A} href="/" rel=prefetch class="mdc-theme--primary">
+        Bad Decision Maker
+      </Title>
+    </Section>
+  </Row>
+</TopAppBar>
+<main class="main-content">
+  <slot></slot>
+</main>
 
 <script>
   import './_app.scss';

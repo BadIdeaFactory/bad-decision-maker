@@ -15,11 +15,242 @@
   -->
 
   <div class="card-container">
+    <Card class="mdc-elevation--z0">
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
     <Card>
       <Content class="mdc-typography--body2">
         <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
         <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
         <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
+        It's all in this card. It's a veritable smorgasbord of card features.
+        -->
+      </Content>
+      <a href="/vote" rel=prefetch>
+        <Actions fullBleed>
+          <Button>
+            <Label>Vote</Label>
+            <i class="material-icons" aria-hidden="true">arrow_forward</i>
+          </Button>
+        </Actions>
+      </a>
+    </Card>
+  </div>
+
+  <div class="card-container">
+    <Card>
+      <Content class="mdc-typography--body2">
+        <h2 class="mdc-typography--headline6" style="margin: 0;">Poll title</h2>
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by slifty yesterday</h3>
+        <!--
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0 10px; color: #888;">And a subtitle.</h3>
         It's all in this card. It's a veritable smorgasbord of card features.
         -->
       </Content>
@@ -70,13 +301,9 @@
     text-decoration: none;
   }
 
-  .paper-container, .card-container {
+  .card-container {
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
-  }
-
-  .paper-container {
-    cursor: pointer;
   }
 </style>

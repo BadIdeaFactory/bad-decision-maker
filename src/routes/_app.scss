@@ -12,12 +12,14 @@
 @import "@material/elevation/mixins";
 // Main Top App Bar styling.
 @import "@smui/top-app-bar/style";
+
 .mdc-top-app-bar.top-app-bar {
   // Color the top bar with "surface" colors.
   @include mdc-top-app-bar-fill-color-accessible(surface);
   @include mdc-top-app-bar-icon-ink-color(on-surface);
   // Give it a shadow.
-  @include mdc-elevation(4);
+  /* @include mdc-elevation(4); */
+  box-shadow: inset 0 -1px 0 rgba(100,121,143,0.122);
   // Position it above the drawer.
   z-index: 7;
 }
