@@ -48,9 +48,6 @@
   import Textfield, {Input, Textarea} from '@smui/textfield';
 
   let name = '';
-  let option1 = 0;
-  let option2 = 0;
-  let option3 = 0;
 
   export let poll;
 </script>
