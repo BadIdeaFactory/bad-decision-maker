@@ -114,6 +114,6 @@
   .card-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 600px;
+    max-width: 700px;
   }
 </style>

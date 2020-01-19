@@ -1,7 +1,7 @@
 <TopAppBar variant="standard" class="top-app-bar">
   <Row>
-    <Section>
-      <Title component={A} href="/" rel=prefetch class="mdc-theme--primary">
+    <Section style="max-width: 700px;margin-right: auto;margin-left: auto;">
+      <Title component={A} href="/" rel=prefetch class="mdc-theme--primary" style="padding-left: 5px">
         Bad Decision Maker
       </Title>
     </Section>
