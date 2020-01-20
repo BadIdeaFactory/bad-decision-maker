@@ -65,6 +65,14 @@
     votes = poll.votes.slice();
   });
 
+  setInterval(async () => {
+    const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
+    const updatedPoll = await res.json();
+
+    votes = updatedPoll.votes;
+    poll.options = poll.options;
+  },2000);
+
   async function vote(option) {
     const body = {
       id: poll.id,
