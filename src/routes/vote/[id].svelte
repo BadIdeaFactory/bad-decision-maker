@@ -62,16 +62,20 @@
 
   export let poll;
 
+  async function refreshPoll () {
+    const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
+    const updatedPoll = await res.json();
+
+    votes = updatedPoll.votes;
+    poll.options = poll.options;
+  }
+
   onMount(() => {
     votes = poll.votes.slice();
 
-    timer = setInterval(async () => {
-      const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
-      const updatedPoll = await res.json();
+    refreshPoll();
 
-      votes = updatedPoll.votes;
-      poll.options = poll.options;
-    },10000);
+    timer = setInterval(refreshPoll,10000);
   });
 
   onDestroy(() => {
