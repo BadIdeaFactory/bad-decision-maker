@@ -52,7 +52,7 @@
   export async function preload(page, session) {
     // const { slug } = page.params;
 
-    const res = await this.fetch(`https://6ykntbtg61.execute-api.us-east-1.amazonaws.com/dev/polls`);
+    const res = await this.fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls`);
     const polls = await res.json();
 
     return { polls };

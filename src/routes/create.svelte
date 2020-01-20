@@ -69,7 +69,7 @@
     };
 
     try {
-      const res = await fetch('https://6ykntbtg61.execute-api.us-east-1.amazonaws.com/dev/polls', {
+      const res = await fetch('https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls', {
         method: 'post',
         body: JSON.stringify(body)
       });
