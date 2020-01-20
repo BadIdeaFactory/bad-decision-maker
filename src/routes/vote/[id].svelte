@@ -50,7 +50,7 @@
 </script>
 
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import Fab from '../../components/fab.svelte';
   import Button, { Label } from '@smui/button';
   import Textfield, {Input, Textarea} from '@smui/textfield';
@@ -58,20 +58,27 @@
   let creator = '';
   let error = '';
   let votes = [];
+  let timer = null;
 
   export let poll;
 
   onMount(() => {
     votes = poll.votes.slice();
+
+    timer = setInterval(async () => {
+      const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
+      const updatedPoll = await res.json();
+
+      votes = updatedPoll.votes;
+      poll.options = poll.options;
+    },10000);
   });
 
-  setInterval(async () => {
-    const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
-    const updatedPoll = await res.json();
-
-    votes = updatedPoll.votes;
-    poll.options = poll.options;
-  },2000);
+  onDestroy(() => {
+    if (timer) {
+      clearInterval(timer);
+    }
+  });
 
   async function vote(option) {
     const body = {
