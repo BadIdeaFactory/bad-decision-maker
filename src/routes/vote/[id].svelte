@@ -18,16 +18,16 @@
       <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
     </div>
 
-    {#if poll.options}
-      {#each poll.options as option}
+    {#if options}
+      {#each options as option}
         <div class="field-container">
-          <Button variant="outlined" style="flex-grow: 1;" on:click="{() => vote(option)}"><Label>{option}</Label></Button>
+          <Button variant="outlined" style="flex-grow: 1;" on:click="{() => vote(option)}" disabled={option.voted}><Label>{ option.voted ? '✓' : ''} {option.name}</Label></Button>
         </div>
-        {#if votes.filter(vote => vote.option === option).length > 0}
+        {#if option.votes.length > 0}
         <div class="votes-container">
           <p>
-            {votes.filter(vote => vote.option === option).length} votes:
-            {votes.filter(vote => vote.option === option).map(vote => vote.creator ? vote.creator : 'anonymous').join(', ')}
+            {option.votes.length} votes:
+            {option.votes.map(vote => vote.creator ? vote.creator : 'anonymous').join(', ')}
           </p>
         </div>
         {/if}
@@ -62,32 +62,27 @@
 
   export let poll;
 
+  let options = poll.options.map(option => ({
+    name: option,
+    votes: poll.votes.filter(vote => vote.option === option),
+    voted: false
+  }));
+
   async function refreshPoll () {
     const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
     const updatedPoll = await res.json();
 
-    votes = updatedPoll.votes;
-    poll.options = poll.options;
+    options.forEach(option => {
+      option.votes = updatedPoll.votes.filter(vote => vote.option === option.name)
+    });
+
+    options = options;
   }
-
-  onMount(() => {
-    votes = poll.votes.slice();
-
-    refreshPoll();
-
-    timer = setInterval(refreshPoll,10000);
-  });
-
-  onDestroy(() => {
-    if (timer) {
-      clearInterval(timer);
-    }
-  });
 
   async function vote(option) {
     const body = {
       id: poll.id,
-      option,
+      option: option.name,
       creator
     };
 
@@ -103,13 +98,29 @@
 
       const vote = await res.json();
 
-      votes.push(vote);
-      poll.options = poll.options;
+      option.votes.push(vote);
+      option.voted = true;
+
+      options = options;
     }
     catch (e) {
       error = e.message;
     }
   }
+
+  onMount(() => {
+    votes = poll.votes.slice();
+
+    refreshPoll();
+
+    timer = setInterval(refreshPoll,10000);
+  });
+
+  onDestroy(() => {
+    if (timer) {
+      clearInterval(timer);
+    }
+  });
 </script>
 
 <style>
