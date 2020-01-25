@@ -18,10 +18,6 @@
           </div>
           <div class="field-container">
             <Textfield style="flex-grow: 1;" variant="outlined" bind:value={title} label="Title" id="title" />
-            <!-- bind:this={titleEl} -->
-            <!-- input$aria-controls="helper-text-title" input$aria-describedby="helper-text-title"
-            <HelperText id="helper-text-title">Title</HelperText>
-            -->
           </div>
           <div class="field-container">
             <Textfield style="flex-grow: 1;" variant="outlined" textarea bind:value={description} label="Description" />

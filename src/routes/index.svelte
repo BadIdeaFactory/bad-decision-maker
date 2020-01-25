@@ -3,34 +3,13 @@
 </svelte:head>
 
 <section>
-  <!--
-  <div class="paper-container">
-    <a href="/create" rel=prefetch>
-      <Paper color="primary" class="paper">
-        <Title>Make bad decisions faster</Title>
-        <Content>Never before has it been this easy to commit to terrible ideas.</Content>
-      </Paper>
-    </a>
-  </div>
-  -->
-
-  <!--
-  <div class="card-container">
-    <p>The original GPF had polls.</p>
-  </div>
-  -->
-
   {#each polls.sort((a,b) => b.createdAt-a.createdAt) as poll}
 
   <div class="card-container">
     <Card>
       <Content class="mdc-typography--body2">
         <h2 class="mdc-typography--headline6" style="margin: 0;">{poll.title}</h2>
-        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by {poll.creator}</h3>
-        <!-- yesterday -->
-        <!--
-        It's all in this card. It's a veritable smorgasbord of card features.
-        -->
+        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
       </Content>
       <a href="/vote/{poll.id}" rel=prefetch>
         <Actions fullBleed>
@@ -50,8 +29,6 @@
 
 <script context="module">
   export async function preload(page, session) {
-    // const { slug } = page.params;
-
     const res = await this.fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls`);
     const polls = await res.json();
 
@@ -60,7 +37,6 @@
 </script>
 
 <script>
-  // import Paper, {Title, Subtitle, Content} from '@smui/paper';
   import Fab from '../components/fab.svelte';
   import Card, {Content, PrimaryAction, Media, MediaContent, Actions, ActionButtons, ActionIcons} from '@smui/card';
   import Button, { Label } from '@smui/button';
