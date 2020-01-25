@@ -20,7 +20,7 @@
   </div>
   -->
 
-  {#each polls as poll}
+  {#each polls.sort((a,b) => b.createdAt-a.createdAt) as poll}
 
   <div class="card-container">
     <Card>
