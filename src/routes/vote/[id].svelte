@@ -60,14 +60,15 @@
 
   let creator = '';
   let error = '';
-  let votes = [];
   let timer = null;
 
   export let poll;
 
+  const votes = poll.votes.sort((a,b) => a.createdAt-b.createdAt);
+
   let options = poll.options.map(option => ({
     name: option,
-    votes: poll.votes.filter(vote => vote.option === option),
+    votes: votes.filter(vote => vote.option === option),
     voted: false
   }));
 
@@ -79,8 +80,10 @@
     const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
     const updatedPoll = await res.json();
 
+    const votes = updatedPoll.votes.sort((a,b) => a.createdAt-b.createdAt);
+
     options.forEach(option => {
-      option.votes = updatedPoll.votes.filter(vote => vote.option === option.name)
+      option.votes = votes.filter(vote => vote.option === option.name)
     });
 
     options = options;
@@ -116,8 +119,6 @@
   }
 
   onMount(() => {
-    votes = poll.votes.slice();
-
     refreshPoll();
 
     timer = setInterval(refreshPoll,10000);
