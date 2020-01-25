@@ -26,7 +26,7 @@
         {#if option.votes.length > 0}
         <div class="votes-container">
           <p>
-            {capFirst(apnumber(option.votes.length))} vote{option.votes.length > 0 ? 's' : ''} from {option.votes.filter(vote => vote.creator).map(vote => vote.creator).join(', ')}{option.votes.filter(vote => vote.creator).length > 0 && option.votes.filter(vote => !vote.creator).length > 0 ? ' and ' : ''}{option.votes.filter(vote => !vote.creator).length > 0 ? `${apnumber(option.votes.filter(vote => !vote.creator).length)} anonymous voters` : ''}.
+            {capFirst(apnumber(option.votes.length))} vote{option.votes.length > 1 ? 's' : ''} from {option.votes.filter(vote => vote.creator).map(vote => vote.creator).join(', ')}{option.votes.filter(vote => vote.creator).length > 0 && option.votes.filter(vote => !vote.creator).length > 0 ? ' and ' : ''}{option.votes.filter(vote => !vote.creator).length > 0 ? `${apnumber(option.votes.filter(vote => !vote.creator).length)} anonymous voters` : ''}.
           </p>
         </div>
         {/if}
