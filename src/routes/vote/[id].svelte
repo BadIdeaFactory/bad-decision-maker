@@ -26,8 +26,10 @@
         {#if option.votes.length > 0}
         <div class="votes-container">
           <p>
-            {option.votes.length} votes:
-            {option.votes.map(vote => vote.creator ? vote.creator : 'anonymous').join(', ')}
+            {capFirst(apnumber(option.votes.length))} vote{option.votes.length > 0 ? 's' : ''} from 
+            {option.votes.filter(vote => vote.creator).map(vote => vote.creator).join(', ')}
+            {option.votes.filter(vote => vote.creator).length > 0 && option.votes.filter(vote => !vote.creator).length > 0 ? ' and ' : ''}
+            {option.votes.filter(vote => !vote.creator).length > 0 ? `${apnumber(option.votes.filter(vote => !vote.creator).length)} anonymous voters` : ''}.
           </p>
         </div>
         {/if}
@@ -54,6 +56,7 @@
   import Fab from '../../components/fab.svelte';
   import Button, { Label } from '@smui/button';
   import Textfield, {Input, Textarea} from '@smui/textfield';
+  import { apnumber } from 'journalize';
 
   let creator = '';
   let error = '';
@@ -67,6 +70,10 @@
     votes: poll.votes.filter(vote => vote.option === option),
     voted: false
   }));
+
+  function capFirst(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   async function refreshPoll () {
     const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
