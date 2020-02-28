@@ -11,7 +11,7 @@
     {/if}
 
     {#if poll.description}
-      <p>{poll.description}</p>
+      <p>{@html insane(marked(poll.description,{ gfm:true }))}</p>
     {/if}
 
     <div class="field-container">
@@ -54,11 +54,13 @@
   import Button, { Label } from '@smui/button';
   import Textfield, {Input, Textarea} from '@smui/textfield';
   import { apnumber } from 'journalize';
+  import marked from 'marked';
+  import insane from 'insane';
 
   let creator = '';
   let error = '';
   let timer = null;
-
+  
   export let poll;
 
   const votes = poll.votes.sort((a,b) => a.createdAt-b.createdAt);

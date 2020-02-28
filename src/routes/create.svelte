@@ -20,7 +20,8 @@
             <Textfield style="flex-grow: 1;" variant="outlined" bind:value={title} label="Title" id="title" />
           </div>
           <div class="field-container">
-            <Textfield style="flex-grow: 1;" variant="outlined" textarea bind:value={description} label="Description" />
+            <Textfield style="flex: 0 0 100%;" variant="outlined" textarea bind:value={description} label="Description" id="input-description" aria-controls="helper-text-description" aria-describedby="helper-text-description" />
+            <HelperText style="flex: 0 0 100%;" id="helper-text-description"><a href="https://guides.github.com/features/mastering-markdown/">Markdown formatting supported</a></HelperText>
           </div>
           {#each options as option, i}
           <div class="field-container">
@@ -93,6 +94,7 @@
   }
 
   .field-container {
+    flex-wrap: wrap;
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
