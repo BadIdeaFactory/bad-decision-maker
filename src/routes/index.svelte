@@ -7,17 +7,19 @@
 
   <div class="card-container">
     <Card>
-      <Content class="mdc-typography--body2">
-        <h2 class="mdc-typography--headline6" style="margin: 0;">{poll.title}</h2>
-        <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
-      </Content>
       <a href="/vote/{poll.id}" rel=prefetch>
-        <Actions fullBleed>
-          <Button>
-            <Label>Vote</Label>
-            <i class="material-icons" aria-hidden="true">arrow_forward</i>
-          </Button>
-        </Actions>
+        <PrimaryAction>
+          <Content class="mdc-typography--body2">
+            <h2 class="mdc-typography--headline6" style="margin: 0;">{poll.title}</h2>
+            <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
+          </Content>
+          <Actions fullBleed>
+            <Button>
+              <Label>Vote</Label>
+              <i class="material-icons" aria-hidden="true">arrow_forward</i>
+            </Button>
+          </Actions>
+        </PrimaryAction>
       </a>
     </Card>
   </div>
@@ -53,5 +55,10 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 700px;
+  }
+
+  .mdc-button {
+    text-align: left;
+    align-items: left;
   }
 </style>
