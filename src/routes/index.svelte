@@ -56,9 +56,4 @@
     margin-right: auto;
     max-width: 700px;
   }
-
-  .mdc-button {
-    text-align: left;
-    align-items: left;
-  }
 </style>
