@@ -87,12 +87,6 @@
 </script>
 
 <style>
-  .create-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-  }
-
   .field-container {
     flex-wrap: wrap;
     display: flex;

@@ -131,12 +131,6 @@
 </script>
 
 <style>
-  .poll-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-  }
-
   .votes-container {
     padding-bottom: 10px;
   }
