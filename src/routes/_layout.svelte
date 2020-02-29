@@ -1,4 +1,9 @@
-<Auth0Context domain="zubakskees-dev.auth0.com" client_id="W50D4SXZKJIBh2ekamhD6UwCcfe0V9ap">
+<Auth0Context
+  domain="zubakskees-dev.auth0.com"
+  client_id="W50D4SXZKJIBh2ekamhD6UwCcfe0V9ap"
+  callback_url={window.location.origin}
+  logout_url={window.location.origin}
+>
   <TopAppBar variant="standard" class="top-app-bar">
     <Row>
       <Section style="padding: 0">
