@@ -39,17 +39,28 @@
 </section>
 
 <script>
+  import { onDestroy } from 'svelte';
   import { goto } from '@sapper/app'
   import Textfield, {Input, Textarea} from '@smui/textfield';
   import Icon from '@smui/textfield/icon/index';
   import HelperText from '@smui/textfield/helper-text/index';
   import Button, { Label } from '@smui/button';
 
+  import {
+    userInfo,
+  } from '@dopry/svelte-auth0';
+
   let title = '';
   let creator = '';
   let description = '';
   let options = ['',''];
   let error = null;
+
+  const unsubscribe = userInfo.subscribe(value => {
+    creator = value && value.name ? value.name : '';
+  });
+
+  onDestroy(unsubscribe);
 
   function addOptions() {
     if (options[options.length-1] !== '') {

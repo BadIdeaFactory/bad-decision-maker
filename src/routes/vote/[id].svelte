@@ -57,9 +57,19 @@
   import marked from 'marked';
   import insane from 'insane';
 
+  import {
+    userInfo,
+  } from '@dopry/svelte-auth0';
+
   let creator = '';
   let error = '';
   let timer = null;
+  
+  const unsubscribe = userInfo.subscribe(value => {
+    creator = value && value.name ? value.name : '';
+  });
+
+  onDestroy(unsubscribe);
   
   export let poll;
 
