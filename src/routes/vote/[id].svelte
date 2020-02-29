@@ -11,7 +11,7 @@
     {/if}
 
     {#if poll.description}
-      <p>{@html insane(marked(poll.description,{ gfm:true }))}</p>
+      <div class="markdown-body"><p>{@html insane(marked(poll.description,{ gfm:true }))}</p></div>
     {/if}
 
     <div class="field-container">
@@ -70,7 +70,7 @@
   });
 
   onDestroy(unsubscribe);
-  
+
   export let poll;
 
   const votes = poll.votes.sort((a,b) => a.createdAt-b.createdAt);

@@ -12,6 +12,7 @@
 @import "@material/elevation/mixins";
 // Main Top App Bar styling.
 @import "@smui/top-app-bar/style";
+@import "@primer/css/markdown/index.scss";
 
 .mdc-top-app-bar.top-app-bar {
   // Color the top bar with "surface" colors.
