@@ -53,6 +53,44 @@
   } from '@dopry/svelte-auth0';
 
   import {mdiAccountCircleOutline} from '@mdi/js';
+
+  // https://github.com/BadIdeaFactory/random-bg-color/blob/master/src/index.js#L22
+  const bifColors = [
+    '#b3115a',
+    '#af1781',
+    '#883a8e',
+    '#8f0863',
+    '#54358c',
+    '#625198',
+    '#312783',
+    '#24378d',
+    '#224c9c',
+    '#1d71b8',
+    '#009c9b',
+    '#31a936',
+    '#9db41f',
+    '#fcea10',
+    '#ffda00',
+    '#f39200',
+    '#e94e1b',
+    '#e6332a',
+    '#e30613',
+    '#be1622'
+  ];
+  
+  document
+    .documentElement
+    .style
+    .setProperty('--mdc-theme-primary',
+      bifColors[Math.floor(Math.random() * bifColors.length)]);
+
+  document
+    .documentElement
+    .style
+    .setProperty('--mdc-theme-secondary',
+      bifColors[Math.floor(Math.random() * bifColors.length)]);
+
+
 </script>
 
 <style>
