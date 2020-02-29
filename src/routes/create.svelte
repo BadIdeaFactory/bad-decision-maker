@@ -7,7 +7,7 @@
     <h2 style="margin-bottom: 0;padding-bottom: 0">Create</h2>
 
     <div>
-        <form on:submit|preventDefault={createPoll}>
+        <form on:submit|preventDefault={() => {}}>
           {#if error}
             <div class="field-container">
               <span style="color: red">{error}</span>
@@ -25,12 +25,13 @@
           </div>
           {#each options as option, i}
           <div class="field-container">
+            <EmojiSelector on:emoji={(event) => {onEmoji(event,i)}} />
             <Textfield style="flex-grow: 1;" variant="outlined" on:input={addOptions} bind:value={option} label="Option {i+1}" />
           </div>
           {/each}
 
           <div class="field-container">
-                <Button variant="raised" type="submit"><Label>Create</Label></Button>
+                <Button variant="raised" type="submit" on:click={createPoll}><Label>Create</Label></Button>
           </div>
 
         </form>
@@ -45,6 +46,7 @@
   import Icon from '@smui/textfield/icon/index';
   import HelperText from '@smui/textfield/helper-text/index';
   import Button, { Label } from '@smui/button';
+  import EmojiSelector from 'svelte-emoji-selector';
 
   import {
     userInfo,
@@ -61,6 +63,11 @@
   });
 
   onDestroy(unsubscribe);
+
+  function onEmoji(event,i) {
+    options[i] = event.detail + ' ' + options[i];
+    addOptions();
+  }
 
   function addOptions() {
     if (options[options.length-1] !== '') {

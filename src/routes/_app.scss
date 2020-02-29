@@ -163,3 +163,36 @@ b, strong {
 p, button, textarea, input, h3, .mdc-floating-label {
   font-family: 'Source Sans Pro', sans-serif !important;
 }
+
+.svelte-emoji-picker {
+    z-index: 1000;
+}
+
+.svelte-emoji-picker input {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.4em;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.svelte-emoji-picker h3 {
+  font-weight: 700;
+  line-height: 1em;
+}
+
+/*
+button.svelte-emoji-picker__trigger {
+    border: none;
+    text-decoration: none;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button.svelte-emoji-picker__trigger:hover,
+button.svelte-emoji-picker__trigger:focus {
+    background: white
+}
+*/
