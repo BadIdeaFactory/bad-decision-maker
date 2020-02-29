@@ -70,14 +70,15 @@
     '#31a936',
     '#9db41f',
     '#fcea10',
-    '#ffda00',
     '#f39200',
     '#e94e1b',
     '#e6332a',
     '#e30613',
     '#be1622'
   ];
-  
+
+  const bifSecondaryColors = bifColors.concat(['#ffda00']);
+
   document
     .documentElement
     .style
@@ -88,7 +89,7 @@
     .documentElement
     .style
     .setProperty('--mdc-theme-secondary',
-      bifColors[Math.floor(Math.random() * bifColors.length)]);
+      bifColors[Math.floor(Math.random() * bifSecondaryColors.length)]);
 
 
 </script>
