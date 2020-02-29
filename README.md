@@ -4,7 +4,7 @@ A web UI to vote on decisions.
 
 Depends on [bad-decision-api](https://github.com/BadIdeaFactory/bad-decision-api).
 
-## Getting started
+## Setup
 
 ```bash
 git clone https://github.com/BadIdeaFactory/bad-decision-maker.git
