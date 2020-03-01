@@ -109,21 +109,21 @@
     document
       .documentElement
       .style
-      .setProperty('--mdc-theme-primary',
+      .setProperty('--mdc-theme-secondary',
         bifColors[Math.floor(Math.random() * bifColors.length)]);
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document
         .documentElement
         .style
-        .setProperty('--mdc-theme-secondary',
+        .setProperty('--mdc-theme-primary',
           bifDarkModeTextColors[Math.floor(Math.random() * bifDarkModeTextColors.length)]);
     }
     else {
       document
         .documentElement
         .style
-        .setProperty('--mdc-theme-secondary',
+        .setProperty('--mdc-theme-primary',
           bifLightModeTextColors[Math.floor(Math.random() * bifLightModeTextColors.length)]);
     }
 
