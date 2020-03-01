@@ -182,22 +182,30 @@ p, button, textarea, input, h3, .mdc-floating-label {
   line-height: 1em;
 }
 
-/*
 button.svelte-emoji-picker__trigger {
     border: none;
     text-decoration: none;
     background: white;
     -webkit-appearance: none;
     -moz-appearance: none;
+    height: 56px;
+}
+
+button.svelte-emoji-picker__trigger .fa-svelte {
+  width: 20px;
+  height: 20px;
 }
 
 button.svelte-emoji-picker__trigger:hover,
 button.svelte-emoji-picker__trigger:focus {
-    background: white
+    background: white;
 }
-*/
 
 .mdc-button.bigger {
   font-size: 30px;
   height: auto;
+}
+
+.fab a {
+  text-decoration: none;
 }

@@ -88,7 +88,7 @@
     .documentElement
     .style
     .setProperty('--mdc-theme-secondary',
-      bifColors[Math.floor(Math.random() * bifSecondaryColors.length)]);
+      bifSecondaryColors[Math.floor(Math.random() * bifSecondaryColors.length)]);
 
 
 </script>
