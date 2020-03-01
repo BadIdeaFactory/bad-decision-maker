@@ -24,6 +24,10 @@
     color: hsla(0,0%,100%,.87);
   }
 
+  .mdc-icon-button__icon svg {
+    color: rgb(100,100,100);
+  }
+
   .markdown-body .highlight pre, .markdown-body pre {
     background-color: rgb(50,50,50);
   }

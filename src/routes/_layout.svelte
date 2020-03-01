@@ -17,7 +17,7 @@
             <Icon >
             {#if !$userInfo || !$userInfo.picture}
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="#000000" d="{mdiAccountCircleOutline}" />
+                <path fill="currentColor" d="{mdiAccountCircleOutline}" />
               </svg>
             {:else}
               <img alt="user picture" style="width:24px;height:24px;border-radius: 50%;" src="{$userInfo.picture}" />
