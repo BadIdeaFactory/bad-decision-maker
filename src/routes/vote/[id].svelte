@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section>
-  <div class="poll-container">
+  <div>
     <h2 style="margin-bottom: 0;padding-bottom: 0">{poll.title}</h2>
 
     {#if poll.creator}

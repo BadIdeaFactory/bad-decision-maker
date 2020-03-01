@@ -16,12 +16,12 @@
 
 @media (prefers-color-scheme: dark) {
   html, body {
-    background-color: rgb(25,25,25);
+    background-color: rgb(20,20,20);
     color: rgb(245,245,245);
   }
 
   button.svelte-emoji-picker__trigger {
-    color: rgb(245,245,245);
+    color: hsla(0,0%,100%,.87);
   }
 
   .markdown-body .highlight pre, .markdown-body pre {
@@ -106,10 +106,6 @@ body, app {
   height: 32px;
   display: block;
   content: " ";
-}
-
-section > div {
-  margin: 1em 0 .6em;
 }
 
 .status {
