@@ -21,7 +21,7 @@
     {#if options}
       {#each options as option}
         <div class="field-container">
-          <Button variant="outlined" style="flex-grow: 1;" on:click="{() => vote(option)}" disabled={option.voted}><Label>{ option.voted ? '✓' : ''} {option.name}</Label></Button>
+          <Button class="bigger" variant="outlined" style="flex-grow: 1;" on:click="{() => vote(option)}" disabled={option.voted}><Label>{ option.voted ? '✓' : ''} {option.name}</Label></Button>
         </div>
         {#if option.votes.length > 0}
         <div class="votes-container">
