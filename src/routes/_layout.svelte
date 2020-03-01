@@ -14,7 +14,7 @@
         </Section>
         <Section align="end" toolbar>
           <IconButton on:click='{() => !$isAuthenticated ? login(false) : logout() }'>
-            <Icon >
+            <Icon>
             {#if !$userInfo || !$userInfo.picture}
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                 <path fill="currentColor" d="{mdiAccountCircleOutline}" />
