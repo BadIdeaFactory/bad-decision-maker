@@ -7,7 +7,7 @@
     <h2 style="margin-bottom: 0;padding-bottom: 0">{poll.title}</h2>
 
     {#if poll.creator}
-      <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
+      <h3 class="mdc-typography--subtitle2" style="margin: 0 0; opacity:0.8;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
     {/if}
 
     {#if poll.description}

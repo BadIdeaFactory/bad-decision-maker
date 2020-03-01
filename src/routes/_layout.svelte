@@ -56,43 +56,77 @@
 
   import {mdiAccountCircleOutline} from '@mdi/js';
 
-  // https://github.com/BadIdeaFactory/random-bg-color/blob/master/src/index.js#L22
-  const bifColors = [
-    '#b3115a',
-    '#af1781',
-    '#883a8e',
-    '#8f0863',
-    '#54358c',
-    '#625198',
-    '#312783',
-    '#24378d',
-    '#224c9c',
-    '#1d71b8',
-    '#009c9b',
-    '#31a936',
-    '#9db41f',
-    '#f39200',
-    '#e94e1b',
-    '#e6332a',
-    '#e30613',
-    '#be1622'
-  ];
-
-  const bifSecondaryColors = bifColors.concat(['#ffda00','#fcea10']);
-
-  document
-    .documentElement
-    .style
-    .setProperty('--mdc-theme-primary',
-      bifColors[Math.floor(Math.random() * bifColors.length)]);
-
-  document
-    .documentElement
-    .style
-    .setProperty('--mdc-theme-secondary',
-      bifSecondaryColors[Math.floor(Math.random() * bifSecondaryColors.length)]);
-
   onMount(() => {
+
+
+    // https://github.com/BadIdeaFactory/random-bg-color/blob/master/src/index.js#L22
+    const bifColors = [
+      '#b3115a',
+      '#af1781',
+      '#883a8e',
+      '#8f0863',
+      '#54358c',
+      '#625198',
+      '#312783',
+      '#24378d',
+      '#224c9c',
+      '#1d71b8',
+      '#009c9b',
+      '#31a936',
+      '#9db41f',
+      '#fcea10',
+      '#ffda00',
+      '#f39200',
+      '#e94e1b',
+      '#e6332a',
+      '#e30613',
+      '#be1622'
+    ];
+
+    const bifDarkModeTextColors = [
+      '#009c9b',
+      '#31a936',
+      '#9db41f',
+      '#f39200',
+      '#e94e1b'
+    ];
+
+    const bifLightModeTextColors = [
+      '#b3115a',
+      '#af1781',
+      '#883a8e',
+      '#8f0863',
+      '#54358c',
+      '#625198',
+      '#312783',
+      '#24378d',
+      '#224c9c',
+      '#1d71b8',
+      '#e30613',
+      '#be1622'
+    ];
+
+    document
+      .documentElement
+      .style
+      .setProperty('--mdc-theme-primary',
+        bifColors[Math.floor(Math.random() * bifColors.length)]);
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document
+        .documentElement
+        .style
+        .setProperty('--mdc-theme-secondary',
+          bifDarkModeTextColors[Math.floor(Math.random() * bifDarkModeTextColors.length)]);
+    }
+    else {
+      document
+        .documentElement
+        .style
+        .setProperty('--mdc-theme-secondary',
+          bifLightModeTextColors[Math.floor(Math.random() * bifLightModeTextColors.length)]);
+    }
+
     WebFont.load({
       google: {
         families: ['Material Icons','Overpass:400,900','Source Sans Pro&display=swap']

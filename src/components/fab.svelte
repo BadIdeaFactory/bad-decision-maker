@@ -1,6 +1,6 @@
 <div class="fab">
   <a href="/create" rel=prefetch>
-    <Fab><Icon class="material-icons">add</Icon></Fab>
+    <Fab aria-label="Create"><Icon class="material-icons">add</Icon></Fab>
   </a>
 </div>
 
