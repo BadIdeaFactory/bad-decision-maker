@@ -106,6 +106,9 @@
     };
 
     try {
+      option.votes.push(body);
+      option.voted = true;
+
       const res = await fetch('https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/vote', {
         method: 'post',
         body: JSON.stringify(body)
@@ -116,9 +119,6 @@
       }
 
       const vote = await res.json();
-
-      option.votes.push(vote);
-      option.voted = true;
 
       options = options;
     }
