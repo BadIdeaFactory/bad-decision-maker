@@ -20,8 +20,12 @@
     color: rgb(245,245,245);
   }
 
+  button.svelte-emoji-picker__trigger {
+    color: rgb(245,245,245);
+  }
+
   .markdown-body .highlight pre, .markdown-body pre {
-    color: rgb(100,100,100);
+    background-color: rgb(50,50,50);
   }
 }
 

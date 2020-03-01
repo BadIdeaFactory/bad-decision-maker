@@ -5,7 +5,7 @@
   logout_url={window.location.origin}
 >
   <div class="app-container">
-    <TopAppBar variant="standard" class="top-app-bar">
+    <TopAppBar variant="static" class="top-app-bar">
       <Row style="max-width: 850px;">
         <Section style="padding: 0">
           <Title component={A} href="/" rel=prefetch class="mdc-theme--primary">
@@ -104,9 +104,6 @@
 </script>
 
 <style>
-.main-content {
-  padding-top: 35px;
-}
 .app-container {
   max-width: 850px;
   margin-left: auto;
