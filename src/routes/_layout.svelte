@@ -98,6 +98,12 @@
         families: ['Material Icons','Overpass:400,900','Source Sans Pro&display=swap']
       }
     });
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", "black-translucent");
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", "black");
+    }
+
   })
 
 
