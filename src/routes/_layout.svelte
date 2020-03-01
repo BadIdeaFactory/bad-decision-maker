@@ -36,10 +36,12 @@
 <script>
   import './_app.scss';
 
+  import { onMount } from 'svelte';
   import TopAppBar, {Row, Section, Title} from '@smui/top-app-bar';
   import A from '@smui/common/A.svelte';
   import IconButton from '@smui/icon-button';
   import {Icon} from '@smui/common';
+  import WebFont from 'webfontloader';
 
   import {
     Auth0Context,
@@ -89,6 +91,14 @@
     .style
     .setProperty('--mdc-theme-secondary',
       bifSecondaryColors[Math.floor(Math.random() * bifSecondaryColors.length)]);
+
+  onMount(() => {
+    WebFont.load({
+      google: {
+        families: ['Material Icons','Overpass:400,900','Source Sans Pro&display=swap']
+      }
+    });
+  })
 
 
 </script>
