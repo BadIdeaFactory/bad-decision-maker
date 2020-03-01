@@ -14,6 +14,17 @@
 @import "@smui/top-app-bar/style";
 @import "@primer/css/markdown/index.scss";
 
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: rgb(25,25,25);
+    color: rgb(245,245,245);
+  }
+
+  .markdown-body .highlight pre, .markdown-body pre {
+    color: rgb(100,100,100);
+  }
+}
+
 .mdc-top-app-bar.top-app-bar {
   // Color the top bar with "surface" colors.
   @include mdc-top-app-bar-fill-color-accessible(surface);
@@ -185,7 +196,7 @@ p, button, textarea, input, h3, .mdc-floating-label {
 button.svelte-emoji-picker__trigger {
     border: none;
     text-decoration: none;
-    background: white;
+    background: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 56px;
@@ -198,7 +209,7 @@ button.svelte-emoji-picker__trigger .fa-svelte {
 
 button.svelte-emoji-picker__trigger:hover,
 button.svelte-emoji-picker__trigger:focus {
-    background: white;
+    background: transparent;
 }
 
 .mdc-button.bigger {
