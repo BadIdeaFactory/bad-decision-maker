@@ -69,7 +69,6 @@
     '#009c9b',
     '#31a936',
     '#9db41f',
-    '#fcea10',
     '#f39200',
     '#e94e1b',
     '#e6332a',
@@ -77,7 +76,7 @@
     '#be1622'
   ];
 
-  const bifSecondaryColors = bifColors.concat(['#ffda00']);
+  const bifSecondaryColors = bifColors.concat(['#ffda00','#fcea10']);
 
   document
     .documentElement
