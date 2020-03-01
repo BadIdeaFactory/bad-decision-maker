@@ -11,7 +11,7 @@
         <PrimaryAction>
           <Content class="mdc-typography--body2">
             <h2 class="mdc-typography--headline6" style="margin: 0;">{poll.title}</h2>
-            <h3 class="mdc-typography--subtitle2" style="margin: 0 0; color: #888;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
+            <h3 class="mdc-typography--subtitle2" style="margin: 0 0; opacity: 0.8;font-size: 15px">Created by {poll.creator} <!-- yesterday --></h3>
           </Content>
           <Actions fullBleed>
             <Button>
