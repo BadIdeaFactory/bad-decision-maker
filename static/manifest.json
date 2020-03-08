@@ -1,7 +1,7 @@
 {
 	"background_color": "#ffffff",
 	"name": "Bad Decision Maker",
-	"short_name": "Decision Maker",
+	"short_name": "Bad Decisions",
 	"display": "standalone",
 	"start_url": "/",
 	"icons": [
