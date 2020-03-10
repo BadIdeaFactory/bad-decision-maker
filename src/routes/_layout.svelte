@@ -7,7 +7,7 @@
   <div class="app-container">
     <TopAppBar variant="static" class="top-app-bar">
       <Row style="max-width: 850px;">
-        <Section>
+        <Section style="padding: 0">
           <Icon class="material-icons">
             <a href="/" rel=prefetch>
                 <img src="logo.svg" style="width:40px;height:40px;padding-left: 12px" alt="thinking face" />
