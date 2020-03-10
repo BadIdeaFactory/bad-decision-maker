@@ -7,8 +7,13 @@
   <div class="app-container">
     <TopAppBar variant="static" class="top-app-bar">
       <Row style="max-width: 850px;">
-        <Section style="padding: 0">
-          <Title component={A} href="/" rel=prefetch class="mdc-theme--primary">
+        <Section>
+          <Icon class="material-icons">
+            <a href="/" rel=prefetch>
+                <img src="logo.svg" style="width:40px;height:40px;" alt="thinking face" />
+            </a>
+          </Icon>
+          <Title component={A} href="/" rel=prefetch class="mdc-theme--primary" style="padding-left: 8px">
             Bad Decision Maker
           </Title>
         </Section>
