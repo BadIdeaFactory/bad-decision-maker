@@ -110,11 +110,11 @@ a {
   }
 
   .mdc-button:disabled {
-      color: hsla(0,0%,100%,.37);
+      color: hsla(0,0%,100%,.37) !important;
   }
 
   .mdc-button--outlined:disabled {
-    border-color: hsla(0,0%,100%,.37);
+    border-color: hsla(0,0%,100%,.37) !important;
   }
 
   .mdc-card {
