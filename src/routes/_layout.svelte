@@ -10,7 +10,7 @@
         <Section>
           <Icon class="material-icons">
             <a href="/" rel=prefetch>
-                <img src="logo.svg" style="width:40px;height:40px;" alt="thinking face" />
+                <img src="logo.svg" style="width:40px;height:40px;padding-left: 12px" alt="thinking face" />
             </a>
           </Icon>
           <Title component={A} href="/" rel=prefetch class="mdc-theme--primary" style="padding-left: 8px">
