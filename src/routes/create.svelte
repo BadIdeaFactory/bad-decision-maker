@@ -4,8 +4,6 @@
 
 <section>
   <div class="create-container">
-    <h2 style="margin-bottom: 0;padding-bottom: 0">Create</h2>
-
     <div>
         <form on:submit|preventDefault={() => {}}>
           {#if error}
