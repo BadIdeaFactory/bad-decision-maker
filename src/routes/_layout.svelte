@@ -46,7 +46,7 @@
 <script>
   import './_app.scss';
 
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import TopAppBar, {Row, Section, Title} from '@smui/top-app-bar';
   import A from '@smui/common/A.svelte';
   import IconButton from '@smui/icon-button';
@@ -69,9 +69,24 @@
   import {mdiAccountCircleOutline} from '@mdi/js';
 
   let menu;
+  let timer;
+  let darkMode = null;
 
-  onMount(() => {
-
+  function pickColors() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      if (!darkMode) {
+        darkMode = true;
+      }
+      else {
+        return;
+      }
+    }
+    else if (darkMode) {
+      darkMode = false;
+    }
+    else {
+      return;
+    }
 
     // https://github.com/BadIdeaFactory/random-bg-color/blob/master/src/index.js#L22
     const bifColors = [
@@ -126,7 +141,7 @@
       .setProperty('--mdc-theme-secondary',
         bifColors[Math.floor(Math.random() * bifColors.length)]);
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (darkMode) {
       document
         .documentElement
         .style
@@ -141,20 +156,28 @@
           bifLightModeTextColors[Math.floor(Math.random() * bifLightModeTextColors.length)]);
     }
 
+    if (darkMode) {
+      document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", "black-translucent");
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", "black");
+    }
+  }
+
+  onMount(() => {
     WebFont.load({
       google: {
         families: ['Material Icons','Overpass:400,900','Source Sans Pro&display=swap']
       }
     });
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", "black-translucent");
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", "black");
+    pickColors();
+    timer = setInterval(pickColors,1000);
+  });
+
+  onDestroy(() => {
+    if (timer) {
+      clearInterval(timer);
     }
-
-  })
-
-
+  });
 </script>
 
 <style>
