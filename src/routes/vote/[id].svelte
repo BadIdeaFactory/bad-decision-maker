@@ -28,7 +28,7 @@
       <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
       <Title id="confirm-title">Vote anonymously?</Title>
       <Content id="confirm-content">
-        You haven't entered a name. Count your vote anonymously?
+        You haven't entered a name. Count vote anonymously?
       </Content>
       <Actions>
         <Button on:click={() => selectedOption = null}>
