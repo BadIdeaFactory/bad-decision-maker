@@ -18,7 +18,7 @@
           </Title>
         </Section>
         <Section align="end" toolbar>
-          <IconButton on:click='{() => !$isAuthenticated ? login(false) : logout() }'>
+          <IconButton on:click='{() => !$isAuthenticated ? login(false) : menu.setOpen(true) }'>
             <Icon>
             {#if !$userInfo || !$userInfo.picture}
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -28,6 +28,11 @@
               <img alt="user picture" style="width:24px;height:24px;border-radius: 50%;" src="{$userInfo.picture}" />
             {/if}
             </Icon>
+            <Menu bind:this={menu} anchorCorner="BOTTOM_LEFT">
+              <List>
+                <Item on:SMUI:action={() => logout()}><Text>Logout</Text></Item>
+              </List>
+            </Menu>
           </IconButton>
         </Section>
       </Row>
@@ -47,6 +52,8 @@
   import IconButton from '@smui/icon-button';
   import {Icon} from '@smui/common';
   import WebFont from 'webfontloader';
+  import Menu from '@smui/menu';
+  import List, {Item, Separator, Text} from '@smui/list';
 
   import {
     Auth0Context,
@@ -60,6 +67,8 @@
   } from '@dopry/svelte-auth0';
 
   import {mdiAccountCircleOutline} from '@mdi/js';
+
+  let menu;
 
   onMount(() => {
 

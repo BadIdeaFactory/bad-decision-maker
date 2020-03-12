@@ -74,11 +74,22 @@ a {
   box-shadow: inset 1px -1px 0 rgba(100,121,143,0.122), inset -1px 1px 0 rgba(100,121,143,0.122) !important;
 }
 
+.mdc-menu-surface {
+  background-color: white !important;
+}
+
+.mdc-list-item__text {
+  color: black;
+}
 
 @media (prefers-color-scheme: dark) {
-  html, body {
-    background-color: rgb(20,20,20);
+  html, body, .mdc-menu-surface {
+    background-color: rgb(20,20,20) !important;
     color: rgb(245,245,245);
+  }
+
+  .mdc-list-item__text {
+    color: white;
   }
 
   button.svelte-emoji-picker__trigger {
