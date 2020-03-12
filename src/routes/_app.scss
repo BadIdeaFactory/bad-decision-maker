@@ -346,3 +346,7 @@ button.svelte-emoji-picker__trigger:focus {
 .mdc-card {
   margin-top: 10px;
 }
+
+.smui-card--padded, .smui-card__content, .smui-card__primary-action--padded {
+  padding-bottom: 0 !important;
+}
