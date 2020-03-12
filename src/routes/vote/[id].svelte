@@ -41,7 +41,7 @@
   export async function preload(page, session) {
     const { id } = page.params;
 
-    const res = await this.fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${id}`);
+    const res = await this.fetch(`https://api.baddecisions.app/polls/${id}`);
     const poll = await res.json();
 
     return { poll };
@@ -86,7 +86,7 @@
   }
 
   async function refreshPoll () {
-    const res = await fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/${poll.id}`);
+    const res = await fetch(`https://api.baddecisions.app/polls/${poll.id}`);
     const updatedPoll = await res.json();
 
     const votes = updatedPoll.votes.sort((a,b) => a.createdAt-b.createdAt);
@@ -109,7 +109,7 @@
       option.votes.push(body);
       option.voted = true;
 
-      const res = await fetch('https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls/vote', {
+      const res = await fetch('https://api.baddecisions.app/polls/vote', {
         method: 'post',
         body: JSON.stringify(body)
       });

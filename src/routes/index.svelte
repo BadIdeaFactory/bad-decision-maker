@@ -31,7 +31,7 @@
 
 <script context="module">
   export async function preload(page, session) {
-    const res = await this.fetch(`https://xuyhy09bx7.execute-api.us-east-1.amazonaws.com/dev/polls`);
+    const res = await this.fetch(`https://api.baddecisions.app/polls`);
     const polls = await res.json();
 
     return { polls };
