@@ -14,10 +14,10 @@
             </div>
           {/if}
           <div class="field-container">
-            <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
+            <Textfield style="flex-grow: 1;" variant="outlined" bind:value={title} label="Title" id="title" />
           </div>
           <div class="field-container">
-            <Textfield style="flex-grow: 1;" variant="outlined" bind:value={title} label="Title" id="title" />
+            <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
           </div>
           <div class="field-container">
             <Textfield style="flex: 0 0 100%;" variant="outlined" textarea bind:value={description} label="Description" id="input-description" aria-controls="helper-text-description" aria-describedby="helper-text-description" />
