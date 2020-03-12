@@ -14,6 +14,12 @@
       <div class="markdown-body"><p>{@html insane(marked(poll.description,{ gfm:true }))}</p></div>
     {/if}
 
+    {#if error}
+      <div class="field-container">
+        <span style="color: red">{error}</span>
+      </div>
+    {/if}
+
     <div class="field-container">
       <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
     </div>
@@ -108,6 +114,8 @@
     try {
       option.votes.push(body);
       option.voted = true;
+      options = options;
+      error = null;
 
       const res = await fetch('https://api.baddecisions.app/polls/vote', {
         method: 'post',
@@ -119,11 +127,13 @@
       }
 
       const vote = await res.json();
-
-      options = options;
     }
     catch (e) {
-      error = e.message;
+      option.votes.pop();
+      option.voted = false;
+      options = options;
+
+      error = 'Failed to vote.';
     }
   }
 
