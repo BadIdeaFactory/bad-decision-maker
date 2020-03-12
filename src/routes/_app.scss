@@ -294,7 +294,7 @@ p, button, textarea, input, h3, .mdc-floating-label {
 }
 
 .svelte-emoji-picker {
-    z-index: 1000;
+    z-index: 2000 !important;
 }
 
 .svelte-emoji-picker input {
@@ -317,7 +317,12 @@ button.svelte-emoji-picker__trigger {
     background: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
-    height: 56px;
+    /* height: 56px; */
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    cursor: pointer;
+    z-index: 501;
 }
 
 button.svelte-emoji-picker__trigger .fa-svelte {
@@ -349,4 +354,9 @@ button.svelte-emoji-picker__trigger:focus {
 
 .smui-card--padded, .smui-card__content, .smui-card__primary-action--padded {
   padding-bottom: 0 !important;
+}
+
+.mdc-text-field--with-leading-icon.mdc-text-field--outlined .mdc-text-field__input {
+  padding-left: 0 !important;
+  margin-left: 48px !important;
 }

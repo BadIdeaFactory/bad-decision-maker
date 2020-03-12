@@ -23,8 +23,9 @@
           </div>
           {#each options as option, i}
           <div class="field-container">
-            <EmojiSelector on:emoji={(event) => {onEmoji(event,i)}} />
-            <Textfield style="flex-grow: 1;" variant="outlined" on:input={addOptions} bind:value={option} label="Option {i+1}" />
+            <Textfield style="flex-grow: 1;" withLeadingIcon variant="outlined" on:input={addOptions} bind:value={option} label="Option {i+1}">
+              <Icon style="z-index: 500"><EmojiSelector on:emoji={(event) => {onEmoji(event,i)}} /></Icon>
+            </Textfield>
           </div>
           {/each}
 
@@ -45,6 +46,7 @@
   import HelperText from '@smui/textfield/helper-text/index';
   import Button, { Label } from '@smui/button';
   import EmojiSelector from 'svelte-emoji-selector';
+  import IconButton from '@smui/icon-button';
 
   import {
     userInfo,
