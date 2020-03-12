@@ -74,22 +74,38 @@ a {
   box-shadow: inset 1px -1px 0 rgba(100,121,143,0.122), inset -1px 1px 0 rgba(100,121,143,0.122) !important;
 }
 
-.mdc-menu-surface {
+.mdc-menu-surface, .mdc-dialog__surface {
   background-color: white !important;
 }
 
-.mdc-list-item__text {
+.mdc-list-item__text, .mdc-dialog__content  {
   color: black;
 }
 
+.mdc-dialog .mdc-dialog__title {
+  color: hsla(0,0%,0%,.87) !important;
+}
+
+.mdc-dialog .mdc-dialog__content {
+    color: hsla(0,0%,0%,.6) !important;
+}
+
 @media (prefers-color-scheme: dark) {
-  html, body, .mdc-menu-surface {
+  html, body, .mdc-menu-surface, .mdc-dialog__surface {
     background-color: rgb(20,20,20) !important;
     color: rgb(245,245,245);
   }
 
   .mdc-list-item__text {
     color: white;
+  }
+
+  .mdc-dialog .mdc-dialog__title {
+    color: hsla(0,0%,100%,.87) !important;
+  }
+
+  .mdc-dialog .mdc-dialog__content {
+      color: hsla(0,0%,100%,.6) !important;
   }
 
   button.svelte-emoji-picker__trigger {

@@ -24,10 +24,26 @@
       <Textfield style="flex-grow: 1;" variant="outlined" bind:value={creator} label="Your name" />
     </div>
 
+    <Dialog bind:this={confirmDialog} aria-labelledby="confirm-title" aria-describedby="confirm-content">
+      <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+      <Title id="confirm-title">Vote anonymously?</Title>
+      <Content id="confirm-content">
+        You haven't entered a name. Count your vote anonymously?
+      </Content>
+      <Actions>
+        <Button on:click={() => selectedOption = null}>
+          <Label>No</Label>
+        </Button>
+        <Button on:click={() => vote(selectedOption)}>
+          <Label>Yes</Label>
+        </Button>
+      </Actions>
+    </Dialog>
+
     {#if options}
       {#each options as option}
         <div class="field-container">
-          <Button class="bigger" variant="outlined" style="flex-grow: 1;" on:click="{() => vote(option)}" disabled={option.voted}><Label>{ option.voted ? '✓' : ''} {option.name}</Label></Button>
+          <Button class="bigger" variant="outlined" style="flex-grow: 1;" on:click="{() => creator ? vote(option) : confirmVote(option)}" disabled={option.voted}><Label>{ option.voted ? '✓' : ''} {option.name}</Label></Button>
         </div>
         {#if option.votes.length > 0}
         <div class="votes-container">
@@ -55,10 +71,12 @@
 </script>
 
 <script>
+  import Dialog, {Title, Content, Actions, InitialFocus} from '@smui/dialog';
   import { onMount, onDestroy } from 'svelte';
   import Fab from '../../components/fab.svelte';
   import Button, { Label } from '@smui/button';
   import Textfield, {Input, Textarea} from '@smui/textfield';
+  import List, {Item, Graphic, Text} from '@smui/list';
   import { apnumber } from 'journalize';
   import marked from 'marked';
   import insane from 'insane';
@@ -70,6 +88,8 @@
   let creator = '';
   let error = '';
   let timer = null;
+  let confirmDialog;
+  let selectedOption = null;
   
   const unsubscribe = userInfo.subscribe(value => {
     creator = value && value.name ? value.name : '';
@@ -104,6 +124,12 @@
     options = options;
   }
 
+  function confirmVote(option) {
+    selectedOption = option;
+
+    confirmDialog.open();
+  }
+
   async function vote(option) {
     const body = {
       id: poll.id,
@@ -135,6 +161,8 @@
 
       error = 'Failed to vote.';
     }
+
+    selectedOption = null;
   }
 
   onMount(() => {
