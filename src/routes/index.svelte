@@ -29,21 +29,30 @@
   <Fab/>
 </section>
 
-<script context="module">
-  export async function preload(page, session) {
-    const res = await this.fetch(`https://api.baddecisions.app/polls`);
-    const polls = await res.json();
-
-    return { polls };
-  }
-</script>
-
 <script>
   import Fab from '../components/fab.svelte';
   import Card, {Content, PrimaryAction, Media, MediaContent, Actions, ActionButtons, ActionIcons} from '@smui/card';
   import Button, { Label } from '@smui/button';
+  import { onMount, onDestroy } from 'svelte';
 
-  export let polls;
+  let polls = [];
+
+  async function refreshPolls () {
+    const res = await fetch(`https://api.baddecisions.app/polls`);
+    polls = await res.json();
+  }
+
+  onMount(() => {
+    refreshPolls();
+
+    //timer = setInterval(refreshPolls,10000);
+  });
+/*
+  onDestroy(() => {
+    if (timer) {
+      clearInterval(timer);
+    }
+  });*/
 </script>
 
 <style>
