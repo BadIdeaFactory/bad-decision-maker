@@ -51,8 +51,8 @@
             <p>
               <span style="padding-left: 8px">{capFirst(apnumber(option.votes.length))} vote{option.votes.length > 1 ? 's' : ''} from:</span>
 
-              <Set chips={option.votes.filter(vote => vote.creator).map(vote => vote.creator).concat(option.votes.filter(vote => !vote.creator).length > 0 ? [`${apnumber(option.votes.filter(vote => !vote.creator).length)} anonymous voters`] : [])} let:chip style="padding: 0">
-                <Chip><Text>{chip}</Text></Chip>
+              <Set chips={option.votes.map(vote => vote.creator).filter((vote,i,self) => vote && self.indexOf(vote) === i).concat(option.votes.filter(vote => !vote.creator).length > 0 ? [`${apnumber(option.votes.filter(vote => !vote.creator).length)} anonymous voters`] : [])} let:chip style="padding: 0;display: inline;">
+                <Chip style="max-width: 100%;"><Text>{chip}</Text></Chip>
               </Set>
             </p>
           </div>
