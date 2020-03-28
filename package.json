@@ -41,6 +41,6 @@
     "svelte": "^3.20.1",
     "svelte-loader": "^2.9.0",
     "svelte-material-ui": "^1.0.0-beta.20",
-    "webpack": "^4.7.0"
+    "webpack": "^4.42.1"
   }
 }
