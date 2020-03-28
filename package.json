@@ -14,7 +14,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "@material/theme": "^4.0.0",
+    "@material/theme": "^5.1.0",
     "@material/typography": "^4.0.0",
     "@mdi/js": "^5.0.45",
     "@primer/css": "^14.3.0",
