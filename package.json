@@ -23,7 +23,7 @@
     "journalize": "^2.2.1",
     "marked": "^0.8.0",
     "polka": "next",
-    "sass": "^1.26.2",
+    "sass": "^1.26.3",
     "sirv": "^0.4.0",
     "svelte-emoji-selector": "^1.0.1",
     "webfontloader": "^1.6.28"
