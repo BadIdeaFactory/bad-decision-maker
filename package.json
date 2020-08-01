@@ -24,7 +24,7 @@
     "marked": "^1.0.0",
     "polka": "next",
     "sass": "^1.26.5",
-    "sirv": "^0.4.0",
+    "sirv": "^1.0.5",
     "svelte-emoji-selector": "^1.0.1",
     "webfontloader": "^1.6.28"
   },
