@@ -30,17 +30,17 @@
   },
   "devDependencies": {
     "@dopry/svelte-auth0": "^0.2.0",
-    "css-loader": "^3.5.3",
-    "mini-css-extract-plugin": "^0.9.0",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.2",
     "npm-run-all": "^4.1.5",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sapper": "^0.27.12",
     "sapper-spa": "^0.1.2",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "style-loader": "^1.2.0",
     "svelte": "^3.21.0",
-    "svelte-loader": "^2.9.0",
+    "svelte-loader": "^3.1.4",
     "svelte-material-ui": "^1.0.0-beta.21",
-    "webpack": "^4.43.0"
+    "webpack": "^5.75.0"
   }
 }
